@@ -15,54 +15,71 @@ body{
     max-height: auto;
 }
 
-.all {
+.all{
     width: 100%;
     height: 100%;
-    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--color_4);
 }
 
 .container{
-    border: 1px solid var(--color_2);
     width: 80%;
-    height:40%;
+    height: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr;
     grid-gap: 20px 20px;
 }
 
-.resultado{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: flex;
-    justify-content: center;
-}
+    .n1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
 
-.n1, .n2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+        grid-column-start: 1;
+        grid-column-end: 2;
 
-.center {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 20px;
-}
+    }
 
-label{
-    display: flex;
-    align-items: center;
-}
+    .n2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
 
-input[type=text]{
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--color_2);
-}
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .n1, .n2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        .n1_a, .n1_b, .n2_a, .n2_b {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+            input[type=text] {
+                width: 60%;
+                background: none;
+                border: none;
+                border-bottom: 1px solid var(--color_2);
+                margin-left: 10px;
+            }
+
+    .resultado {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+        .resultado p{
+            text-align: center;
+        }
+
